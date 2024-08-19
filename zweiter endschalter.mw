@@ -1,0 +1,10 @@
+Address       = 8012
+Initial Value = 
+Tag           = näherumgssensor
+Description   = 
+
+Address       = 8015
+Initial Value = 
+Tag           = taster input int
+Description   = 
+

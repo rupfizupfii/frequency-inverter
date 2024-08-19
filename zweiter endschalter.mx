@@ -1,0 +1,15 @@
+Address       = 5002
+Initial Value = 
+Tag           = näherungssensor
+Description   = 
+
+Address       = 5012
+Initial Value = 
+Tag           = reduzierte drehz
+Description   = 
+
+Address       = 6000
+Initial Value = 
+Tag           = To fast sensor2
+Description   = 
+

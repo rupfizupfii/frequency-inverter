@@ -1,0 +1,9 @@
+WEG Ladder Programmer V11.13
+Copyright (C) 1999-2024 WEG. All rights reserved.
+
+Message sintax:
+File name (Page,Line,Column) :
+Code : message
+
+ZWEITER ENDSCHALTER.BIN - 0 error(s), 0 warnings(s)
+- Aplication size : 1640 bytes
