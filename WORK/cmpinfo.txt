@@ -5,27 +5,27 @@ Copyright (C) 1999-2024 WEG. All rights reserved.
 
 - Equipament      : CFW11
 - Project         : ZWEITER ENDSCHALTER.LDD
-- Time            : 14:16:38
-- Date            : Wednesday, August 21, 2024
+- Time            : 19:14:20
+- Date            : Saturday, November 23, 2024
 - Elapsed time    : 0 segcond(s)
 
 ***** PROGRAM INFORMATION *****
 
-- Pages           : 6
-- Lógics          : 25
-- Elements        : 110
+- Pages           : 7
+- Lógics          : 28
+- Elements        : 120
 
 ***** FILES INFORMATION *****
 
 - Project path    : c:\weg\wlp v11.13\projects\zweiter endschalter  
 
 - Name            : zweiter endschalter.ldd
-- Time            : 14:16:08
-- Date            : Wednesday, August 21, 2024
-- Size            : 3203 bytes
+- Time            : 19:14:19
+- Date            : Saturday, November 23, 2024
+- Size            : 3643 bytes
 
 - Name            : work\zweiter endschalter.bin
-- Time            : 14:16:38
-- Date            : Wednesday, August 21, 2024
-- Size            : 1640 bytes
+- Time            : 19:14:20
+- Date            : Saturday, November 23, 2024
+- Size            : 1730 bytes
 

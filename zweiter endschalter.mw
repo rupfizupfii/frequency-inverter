@@ -1,6 +1,46 @@
+Address       = 8002
+Initial Value = 
+Tag           = systemFaultState
+Description   = 
+
+Address       = 8003
+Initial Value = 
+Tag           = faultNumber
+Description   = 
+
+Address       = 8004
+Initial Value = 
+Tag           = faultTimer
+Description   = 
+
+Address       = 8008
+Initial Value = 
+Tag           = logRemote
+Description   = 
+
+Address       = 8009
+Initial Value = 
+Tag           = remReference
+Description   = 
+
+Address       = 8011
+Initial Value = 
+Tag           = speedKeyBoard
+Description   = 
+
 Address       = 8012
 Initial Value = 
 Tag           = näherumgssensor
+Description   = 
+
+Address       = 8013
+Initial Value = 
+Tag           = motorSpeed
+Description   = 
+
+Address       = 8014
+Initial Value = 
+Tag           = logRemoteSetter
 Description   = 
 
 Address       = 8015

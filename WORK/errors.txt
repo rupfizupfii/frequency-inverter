@@ -6,4 +6,4 @@ File name (Page,Line,Column) :
 Code : message
 
 ZWEITER ENDSCHALTER.BIN - 0 error(s), 0 warnings(s)
-- Aplication size : 1640 bytes
+- Aplication size : 1730 bytes

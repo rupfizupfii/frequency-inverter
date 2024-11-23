@@ -225,6 +225,17 @@ Column:=07
 )
 ST    %UW1011
 LD    %MX6000
+CAL   TON
+(
+PT:=2,
+ET:=8004,
+PTMODE:=CONSTANT,
+ETMODE:=WORD_MARKER,
+TIMEBASE:=1,
+Page:=02,
+Line:=12,
+Column:=01
+)
 CALL   USERERR
 (
 CODE:=754,
@@ -232,7 +243,7 @@ TYPE:=1,
 TEXT:=sec: drehzahl ist > 1000,
 Page:=02,
 Line:=12,
-Column:=01
+Column:=07
 )
 ST    %MX5023
 
@@ -319,7 +330,7 @@ Line:=00,
 Column:=07
 )
 ST    %MX5025
-LD    %MX5040
+LDN   %MX5045
 CAL   COMP
 (
 OPERATOR:=5,
@@ -658,7 +669,7 @@ DATA1:=8015.000000,
 MODE:=CONSTANT,
 DATA2:=13.000000,
 Page:=06,
-Line:=03,
+Line:=00,
 Column:=01
 )
 CAL   TRANSFER
@@ -669,7 +680,7 @@ DSTMODE:=BIT_SYS,
 SRC:=0.00000,
 DST:=3005,
 Page:=06,
-Line:=03,
+Line:=00,
 Column:=04
 )
 CAL   REF
@@ -682,7 +693,7 @@ SPEEDUNIT:=1,
 DT_TORQUE:=CONSTANT,
 TORQUE:=0,
 Page:=06,
-Line:=03,
+Line:=00,
 Column:=07
 )
 ST    %MX5023
@@ -696,7 +707,7 @@ DATA1:=8015.000000,
 MODE:=CONSTANT,
 DATA2:=12.000000,
 Page:=06,
-Line:=06,
+Line:=03,
 Column:=01
 )
 CAL   TRANSFER
@@ -707,7 +718,7 @@ DSTMODE:=BIT_SYS,
 SRC:=0.00000,
 DST:=3005,
 Page:=06,
-Line:=06,
+Line:=03,
 Column:=04
 )
 CAL   REF
@@ -720,10 +731,62 @@ SPEEDUNIT:=1,
 DT_TORQUE:=CONSTANT,
 TORQUE:=0,
 Page:=06,
-Line:=06,
+Line:=03,
 Column:=07
 )
 ST    %MX5023
+
+(* PAGE 7 *)
+#     New Page
+LD    %MX5046
+CAL   COMP
+(
+OPERATOR:=1,
+FORMAT:=0,
+MODE:=WORD_MARKER,
+DATA1:=8012.000000,
+MODE:=CONSTANT,
+DATA2:=1.000000,
+Page:=07,
+Line:=00,
+Column:=01
+)
+CAL   TRANSFER
+(
+OPERATOR:=0,
+SRCMODE:=CONSTANT,
+DSTMODE:=BIT_SYS,
+SRC:=1.00000,
+DST:=3011,
+Page:=07,
+Line:=00,
+Column:=04
+)
+STR   %MX5045
+(
+Page:=07,
+Line:=00,
+Column:=09
+)
+LD    %MX5046
+CAL   COMP
+(
+OPERATOR:=3,
+FORMAT:=0,
+MODE:=WORD_MARKER,
+DATA1:=8015.000000,
+MODE:=CONSTANT,
+DATA2:=1.000000,
+Page:=07,
+Line:=03,
+Column:=01
+)
+STR   %MX5045
+(
+Page:=07,
+Line:=03,
+Column:=09
+)
 LD    %MX5040
 CAL   COMP
 (
@@ -733,35 +796,16 @@ MODE:=WORD_MARKER,
 DATA1:=8015.000000,
 MODE:=CONSTANT,
 DATA2:=8.000000,
-Page:=06,
-Line:=09,
+Page:=07,
+Line:=06,
 Column:=01
 )
-CAL   TRANSFER
+STS   %MX5045
 (
-OPERATOR:=0,
-SRCMODE:=CONSTANT,
-DSTMODE:=BIT_SYS,
-SRC:=0.00000,
-DST:=3005,
-Page:=06,
-Line:=09,
-Column:=04
+Page:=07,
+Line:=06,
+Column:=09
 )
-CAL   REF
-(
-DT_MODE:=CONSTANT,
-MODE:=0,
-DT_SPEED:=CONSTANT,
-SPEED:=200,
-SPEEDUNIT:=1,
-DT_TORQUE:=CONSTANT,
-TORQUE:=0,
-Page:=06,
-Line:=09,
-Column:=07
-)
-ST    %MX5023
 LD    %MX5040
 CAL   COMP
 (
@@ -771,8 +815,8 @@ MODE:=WORD_MARKER,
 DATA1:=8015.000000,
 MODE:=CONSTANT,
 DATA2:=9.000000,
-Page:=06,
-Line:=12,
+Page:=07,
+Line:=09,
 Column:=01
 )
 CAL   TRANSFER
@@ -780,26 +824,56 @@ CAL   TRANSFER
 OPERATOR:=0,
 SRCMODE:=CONSTANT,
 DSTMODE:=BIT_SYS,
-SRC:=0.00000,
+SRC:=1.00000,
 DST:=3005,
-Page:=06,
-Line:=12,
+Page:=07,
+Line:=09,
 Column:=04
+)
+STS   %MX5055
+(
+Page:=07,
+Line:=09,
+Column:=09
+)
+LD    %MX5045
+CAL   COMP
+(
+OPERATOR:=1,
+FORMAT:=0,
+MODE:=WORD_MARKER,
+DATA1:=8012.000000,
+MODE:=CONSTANT,
+DATA2:=0.000000,
+Page:=07,
+Line:=12,
+Column:=01
 )
 CAL   REF
 (
 DT_MODE:=CONSTANT,
 MODE:=0,
 DT_SPEED:=CONSTANT,
-SPEED:=200,
+SPEED:=3000,
 SPEEDUNIT:=1,
 DT_TORQUE:=CONSTANT,
 TORQUE:=0,
-Page:=06,
+Page:=07,
+Line:=12,
+Column:=04
+)
+CAL   TRANSFER
+(
+OPERATOR:=0,
+SRCMODE:=CONSTANT,
+DSTMODE:=BIT_SYS,
+SRC:=1.00000,
+DST:=3005,
+Page:=07,
 Line:=12,
 Column:=07
 )
-ST    %MX5023
+ST    %MX5046
 
 (* Return to operational system *)
 RTS
